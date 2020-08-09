@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html dir="ltr" xml:lang="fr" class="yui3-js-enabled" lang="fr"><head>
+    <title>Corrigé du TD 9</title>
+    <link rel="shortcut icon" href="https://moodle-sciences.upmc.fr/moodle-2019/theme/image.php/boost/theme/1584696210/favicon">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="moodle, Corrigé du TD 9">
+<link rel="stylesheet" type="text/css" href="td9_fichiers/yui_combo.css"><script charset="utf-8" id="yui_3_17_2_1_1586516841678_8" src="td9_fichiers/yui_combo_002.js" async=""></script><script charset="utf-8" id="yui_3_17_2_1_1586516841678_18" src="td9_fichiers/yui_combo_003.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="td9_fichiers/all.css">
+<link rel="stylesheet" type="text/css" href="td9_fichiers/print.css">
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019","sesskey":"pIBQiIroBx","themerev":"1584696210","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1584696211","admin":"admin","svgicons":true,"usertimezone":"Europe\/Paris","contextid":750728};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/theme\/yui_combo.php?m\/1584696211\/","combine":true,"comboBase":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/theme\/yui_combo.php?","ext":false,"root":"m\/1584696211\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_role-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_stack-input":{"requires":["node","event-valuechange","moodle-core-event","io","json-parse"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-rooms":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-modform":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-recordings":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_bigbluebuttonbn-imports":{"requires":["base","node"]},"moodle-mod_bigbluebuttonbn-broker":{"requires":["base","node","datasource-get","datasource-jsonschema","datasource-polling","moodle-core-notification"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_xp-notification":{"requires":["base","node","handlebars","button-plugin","moodle-core-notification-dialogue"]},"moodle-block_xp-rulepicker":{"requires":["base","node","handlebars","moodle-core-notification-dialogue"]},"moodle-block_xp-filters":{"requires":["base","node","moodle-core-dragdrop","moodle-block_xp-rulepicker"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_panoptobutton-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1584696211\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/lib\/javascript.php\/1584696211\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle-sciences.upmc.fr\/moodle-2019\/lib\/javascript.php\/1584696211\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    config: ["Accessible.js", "Safe.js"],
+    errorSettings: { message: ["!"] },
+    skipStartupTypeset: true,
+    messageStyle: "none"
+});
+</script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="td9_fichiers/first.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="td9_fichiers/jquery-3.js"></script></head>
+
+<body id="page-mod-book-print" class="format-topics  path-mod path-mod-book gecko dir-ltr lang-fr yui-skin-sam yui3-skin-sam moodle-sciences-upmc-fr--moodle-2019 pagelayout-embedded course-4504 context-750728 cmid-104990 category-14  jsenabled">
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Passer au contenu principal</a>
+</div><script type="text/javascript" src="td9_fichiers/yui_combo.js"></script><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div><script type="text/javascript" src="td9_fichiers/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page">
+    <div id="page-content">
+        <div role="main" id="yui_3_17_2_1_1586516841678_21"><span id="user-notifications"></span><span id="maincontent"></span><a onclick="window.print();return false;" class="hidden-print" href="#"><img class="icon icon" alt="Imprimer tout le livre" title="Imprimer tout le livre" src="td9_fichiers/book.svg">Imprimer tout le livre</a>    <a name="top"></a>
+    <h1>Corrigé du TD 9</h1>    <p class="book_summary"></p>
+    <div class="book_info"><table>
+    <tbody><tr>
+    <td>Site:</td>
+    <td><a href="https://moodle-sciences.upmc.fr/moodle-2019">Moodle Sciences 2019</a></td>
+    </tr><tr>
+    <td>Cours:</td>
+    <td>Programmation Objet avancée - S2</td>
+    </tr><tr>
+    <td>Livre:</td>
+    <td>Corrigé du TD 9</td>
+    </tr><tr>
+    <td>Imprimé par:</td>
+    <td>Gabriel Cao</td>
+    </tr><tr>
+    <td>Date:</td>
+    <td>vendredi 10 avril 2020, 13:07</td>
+    </tr>
+    </tbody></table></div>
+
+    <div class="book_toc_numbered"><a name="toc"></a><h2>Table des matières</h2><ul><li><a title="1. Introduction" href="#ch5305">1. Introduction</a></li><li><a title="2. Question 1" href="#ch5306">2. Question 1</a></li><li><a title="3. Correction de la question 1" href="#ch5307">3. Correction de la question 1</a></li><li><a title="4. Question 2" href="#ch5308">4. Question 2</a></li><li><a title="5. Correction de la question 2" href="#ch5310">5. Correction de la question 2</a></li><li><a title="6. Question 3." href="#ch5311">6. Question 3.</a></li><li><a title="7. Correction de la question 3" href="#ch5314">7. Correction de la question 3</a></li><li><a title="8. Question 4" href="#ch5319">8. Question 4</a></li><li><a title="9. Correction de la question 4" href="#ch5320">9. Correction de la question 4</a></li><li><a title="10. Question 5" href="#ch5321">10. Question 5</a></li><li><a title="11. Correction de la question 5" href="#ch5322">11. Correction de la question 5</a></li><li><a title="12. Question 6" href="#ch5323">12. Question 6</a></li><li><a title="13. Correction de la question 6" href="#ch5326">13. Correction de la question 6</a></li><li><a title="14. Question 7" href="#ch5329">14. Question 7</a></li><li><a title="15. Correction de la question 7" href="#ch5330">15. Correction de la question 7</a></li><li><a title="16. Question 8" href="#ch5333">16. Question 8</a></li><li><a title="17. Correction de la question 8" href="#ch5336">17. Correction de la question 8</a></li><li><a title="18. Question 9" href="#ch5339">18. Question 9</a></li><li><a title="19. Correction de la question 9" href="#ch5341">19. Correction de la question 9</a></li><li><a title="20. Conclusion" href="#ch5343">20. Conclusion</a></li></ul></div><div class="book_chapter"><a name="ch5305"></a><h2>1. Introduction</h2><p>Cet exercice corrigé reprend le thème général du <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5305/td9.pdf" target="_blank">TD 9 sur le design pattern Observer</a>.
+ Toutefois, quelques questions ont été modifiées. Comme pour le TD 8 
+corrigé, vous trouverez une question suivie de sa correction à la page 
+suivante. L'exercice n'a de sens que si vous travaillez sur une question
+ avant de lire sa correction.</p><p><span style="font-size: 0.9375rem;"><b>Sujet.</b></span></p><p><span style="font-size: 0.9375rem;">Le but de l'exercice est de développer une API permettant d’avoir des variables observables. Un&nbsp;</span><span style="font-size: 0.9375rem;">objet observateur peut alors s’abonner à ce type de variables et sera notifié&nbsp;dès que leur valeur change.&nbsp;</span><span style="font-size: 0.9375rem;">Dans un premier temps, nous allons programmer le mécanisme&nbsp;</span><span style="font-size: 0.9375rem;">générique permettant à n’importe quel objet observable de gérer une liste d’objets observateurs.&nbsp;</span><span style="font-size: 0.9375rem;">Dans un second temps, nous définirons le code d’une variable observable. Enfin, nous traiterons&nbsp;</span><span style="font-size: 0.9375rem;">la notion de liaison (<i>binding</i>) permettant de définir des dépendances d’observation entre&nbsp;</span><span style="font-size: 0.9375rem;">plusieurs
+ variables observables et gérer leur mise à jour automatique. Il sera 
+possible d'indiquer qu'une variable reste toujours égale à une autre, ou
+ bien à la somme de deux autres variables.</span></p></div><div class="book_chapter" id="yui_3_17_2_1_1586516841678_20"><a name="ch5306"></a><h2>2. Question 1</h2><p><b><br></b></p><p><b>Interfaces.</b></p>
+<p>Voici deux interfaces <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5306/IObserver.java" target="_blank">IObserver&lt;T&gt;</a>&nbsp;et <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5306/IObservable.java" target="_blank">IObservable&lt;T&gt;</a>&nbsp;qui spécifient les méthodes&nbsp;<span style="font-size: 0.9375rem;">que doivent</span><span style="font-size: 0.9375rem;">&nbsp;offrir respectivement un objet observateur et un objet observable.&nbsp;</span></p><p><span style="font-size: 0.9375rem;">Un
+ observateur est informé d'un changement d'état de l'objet observable 
+par un appel à sa méthode update. L'appel de méthode rappelle d'abord 
+l'identité de l'objet observable qui a changé, puis son ancienne valeur 
+et sa nouvelle valeur.&nbsp;</span><span style="font-size: 0.9375rem;">Le paramètre T est une variable de type qui indique le type de&nbsp;</span><span style="font-size: 0.9375rem;">la notification lorsque l’observable change d’état.</span></p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>IObservable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">,</span> T oldval<span class="token punctuation">,</span> T newval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p></p>
+<p><span style="font-size: 0.9375rem;">Un objet observable maintient une
+ liste d'observateurs. Elle peut être retournée (getObservers), ou 
+modifiée par ajout (addObserver) ou suppression (removeObserver) d'un 
+observateur.</span></p>
+<pre class="line-numbers  language-java" id="yui_3_17_2_1_1586516841678_19"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Collection<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IObservable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">void</span> <span class="token function">addObserver</span><span class="token punctuation">(</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">void</span> <span class="token function">removeObserver</span><span class="token punctuation">(</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	Collection<span class="token operator">&lt;</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;&gt;</span> <span class="token function">getObservers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <p><b><br></b></p><p><b>Question 1.</b></p>
+<p><span>Donnez le code d'une classe <b>Observable&lt;T&gt;</b> qui implante l’ensemble&nbsp;</span><span style="font-size: 0.9375rem;">des méthodes offertes par l’interface IObservable&lt;T&gt;.</span></p>
+<p><span style="font-size: 0.9375rem;"><br></span></p></div><div class="book_chapter"><a name="ch5307"></a><h2>3. Correction de la question 1</h2><p></p>
+<p><b>Question 1.</b></p>
+<p><span style="font-size: 0.9375rem;">Donnez le code de la classe Observable&lt;T&gt; qui implante l’ensemble&nbsp;des méthodes offertes par l’interface <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5307/IObservable.java" target="_blank">IObservable&lt;T&gt;</a>.</span><br></p><br>
+<p></p>
+<p><b>Correction.</b></p>
+<p><span>La classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5307/Observable.java" target="_blank">Observable&lt;T&gt;</a> est un simple conteneur pour une liste d'<a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5307/IObserver.java" target="_blank">IObserver&lt;T&gt;</a>, à qui elle délègue l'ajout et la suppression d'un élément. Elle ne pose aucune difficulté.</span></p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>ArrayList<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Collection<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Observable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">implements</span> <span class="token class-name">IObservable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword">private</span> Collection<span class="token operator">&lt;</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;&gt;</span> observers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addObserver</span><span class="token punctuation">(</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		observers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">removeObserver</span><span class="token punctuation">(</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		observers<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>	
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword">public</span> Collection<span class="token operator">&lt;</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;&gt;</span> <span class="token function">getObservers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> observers<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>	
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br><span><br><b>Note sur getObservers.</b><br><br></span>Nous
+en profitons pour rappeler ici les dangers de retourner une référence à 
+un attribut collection mutable de notre classe, comme c'est fait ici 
+pour observers par getObservers. Cela permet en effet au client de 
+modifier l'attribut par les méthodes classiques
+de collections : getObservers().add(...), getObservers().remove(...), 
+getObservers().clear(), etc., sans passer par les méthodes addObserver 
+et removeObserver d'Observable&lt;T&gt;. Dans notre cas, c'est bénin, 
+puisque les méthodes addObserver et removeObserver se contentent 
+d'appeler add et remove, et rien d'autre. Nous laissons donc passer ici 
+ce léger défaut dans le code ci-dessus, en notant tout de même que cela 
+brise l'encapsulation (que se passe-t-il si la structure de données 
+évolue ?). La présence de méthodes addObserver et removeObserver indique
+ clairement que c'est par ces méthodes que doivent passer les 
+modifications de la liste d'observateurs. <br>Si nous voulions corriger ce problème et interdire la modification de l'attribut observers par getObservers,
+nous pourrions modifier getObservers pour qu'il retourne une copie : <pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>observers<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>Ainsi, c'est la copie qui est modifiée par le client par getObservers().add(...), laissant l'attribut observers original intact.<br><br>Une
+solution plus élégante serait de retourner une vue en lecture seule de la liste.&nbsp;Ceci peut se faire grâce à un <i>décorateur</i>&nbsp;qui redéfinit les méthodes de mutation (add, remove, clear, ...) pour générer une exception, tout en gardant intactes
+les méthodes qui ne font pas de modification (contains, isEmpty, iterator, ...). Un tel décorateur est en fait présent dans la <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html" target="_blank">bibliothèque standard Java Collections</a>. Nous écrivons alors :<br><pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">return</span> Collections<span class="token punctuation">.</span><span class="token function">unmodifiableCollection</span><span class="token punctuation">(</span>observers<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>La
+solution
+ à base de décorateur est plus élégante que la solution à base de copie.
+ En effet, elle peut s'implanter sans copie, par délégation à la 
+collection décorée. Par ailleurs, elle indique clairement au client, par
+ une exception, que la collection
+ne doit pas être modifiée. La solution à base de copie autorise les 
+modifications et peut faire croire au programmeur que la liste des 
+observateurs de l'observable reflète ces modifications, alors que ce 
+n'est pas le cas (il y a une ambigüité sur le comportement
+de l'API, ce qui est toujours à éviter).<br><br><br></div><div class="book_chapter"><a name="ch5308"></a><h2>4. Question 2</h2><p><b><br></b></p><p><b>Variable observable.</b></p>
+<p>Une variable observable est un objet observable qui possède de plus 
+une valeur qui peut être lue avec une méthode getValue et modifiée avec 
+une méthode setValue. Elle obéit donc à l'interface <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5308/IObservableVariable.java" target="_blank">IObservableVariable&lt;T&gt;</a> suivante, qui étend <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5308/IObservable.java" target="_blank">IObservable&lt;T&gt;</a>.</p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">IObservableVariable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">IObservable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	T <span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">void</span> <span class="token function">setValue</span><span class="token punctuation">(</span>T value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><span style="font-size: 0.9375rem;"><b><br></b></span></p><p><span style="font-size: 0.9375rem;"><b>Question 2.</b></span></p>
+<p><span style="font-size: 0.9375rem;">Programmez une classe <b>ObservableVariable&lt;T&gt; </b>qui
+ étend Observable&lt;T&gt; et implante IObservableVariable&lt;T&gt;. 
+Elle portera un attribut de type T dont la valeur initiale est précisée 
+lors de la construction. La méthode getValue se contentera de retourner 
+la valeur de l'attribut. La méthode setValue modifiera la valeur de 
+l'attribut. Elle informera également tous les observateurs de cette 
+modification en appelant leur méthode update. <b>Attention :</b>&nbsp;la méthode update ne sera appelée que si la nouvelle valeur spécifiée par setValue est différente de la valeur courante.</span></p></div><div class="book_chapter"><a name="ch5310"></a><h2>5. Correction de la question 2</h2><p><b><br></b></p><p><b>Question 2.</b></p>
+<p>Programmez une classe ObservableVariable&lt;T&gt; qui étend <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5310/Observable.java" target="_blank">Observable&lt;T&gt;</a> et implante <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5310/IObservableVariable.java" target="_blank">IObservableVariable&lt;T&gt;</a>.</p>
+<p><b>Correction.</b></p>
+<p><span style="font-size: 0.9375rem;">Voici la classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5310/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a>.</span></p><pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">Observable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">implements</span> <span class="token class-name">IObservableVariable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword">private</span> T value<span class="token punctuation">;</span>
+	
+	<span class="token keyword">public</span> <span class="token function">ObservableVariable</span><span class="token punctuation">(</span>T initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		value <span class="token operator">=</span> initialvalue<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> T <span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> value<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setValue</span><span class="token punctuation">(</span>T newvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>newvalue<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		T oldvalue <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+		value <span class="token operator">=</span> newvalue<span class="token punctuation">;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span>IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> observer <span class="token operator">:</span> <span class="token function">getObservers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			observer<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> oldvalue<span class="token punctuation">,</span> newvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br><p><span>&nbsp;Son intérêt principal réside dans sa méthode setValue :</span><br></p><p></p><ul><li><span>C'est un&nbsp;<i>setter&nbsp;</i>intelligent.
+ Il ne se contente pas uniquement de modifier l'attribut, mais il 
+effectue également une action : l'appel à update de tous les 
+observateurs de la variable. Il est important que toutes les 
+modifications de l'attribut passent par setValue, sous peine d'oublier 
+d'informer les observateurs. Déclarer l'attribut private permet de 
+s'assurer que cela sera le cas pour tous les clients 
+d'ObservableVariable et toutes les classes dérivées. C'est garanti par 
+la vérification de droits d'accès effectuée par le compilateur. Par 
+contre, ObservableVariable garde toujours un accès inconditionnel à 
+l'attribut privé. C'est au programmeur, sans aide du compilateur, de 
+s'assurer que la classe ObservableVariable n'accède jamais directement à
+ l'attribut, sauf dans setValue, et appelle setValue pour la modifier en
+ dehors de setValue (ce cas ne se présente pas ici, mais arrivera dans 
+les prochaines questions).</span></li><li><span>getObservers, hérité de Observable, permet d'obtenir la liste des observateurs et d'itérer dessus.</span></li><li>Vérifier
+ que la nouvelle valeur et l'ancienne sont différentes avant d'appeler 
+update permet d'éviter des appels inutiles, et donc de gagner en 
+efficacité. Nous verrons également un peu plus tard que cela permet 
+d'éviter des cycles infinis de mises à jour.</li><li>La verification que
+ la nouvelle valeur et l'ancienne sont différentes se fait avec equals. 
+Cela permet de rester le plus générique possible, puisque T peut 
+représenter un type arbitraire.</li><li>Notez que l'appel à update des 
+observateurs est effectué après la modification de l'attribut. D'autres 
+choix sont bien sûrs possibles. Dans tous les cas, il faudra documenter 
+clairement notre choix. Ici, la documentation de l'API indiquerait que 
+les observateurs sont appelés immédiatement&nbsp;<i>après</i>&nbsp;la modification de la variable. Ainsi, un appel à getValue dans update retournera la nouvelle valeur de la variable.&nbsp;</li><li>Il
+ semble par contre judicieux d'interdire les appels à setValue sur une 
+variable observable dans la méthode update d'un observateur sur cette 
+même variable : ceci risque de générer des séquences incohérentes 
+d'appels à update. Nous n'effectuons pas ici de telle vérification ; 
+c'est au programmeur de prendre ses précautions.</li><li>Si une variable
+ observable a plusieurs observateurs, l'ordre dans lequel ils sont 
+appelés est fixé par la structure de donnée utilisée. Ici, nous 
+utilisons une instance de List ; addObserver appelle add, qui ajoute 
+l'observateurs à la fin de la liste. Les observateurs sont donc appelés 
+dans l'ordre dans lequel ils ont été ajoutés avec addObserver. 
+Cependant, une autre structure données, comme par exemple un Set, 
+n'aurait pas les même garanties. En définissant notre API des variables 
+observables, nous avons le choix entre : soit garantir l'ordre d'appel 
+des observateurs, ce qui nous limite dans nos choix d'implantation ; 
+soit indiquer que l'ordre est arbitraire, ce qui nous libère de 
+contraintes d'implantation mais impose au client d'écrire son code pour 
+ne pas en dépendre. Les deux choix se justifient. Il faut, là encore, 
+bien documenter notre choix.</li></ul><br></div><div class="book_chapter"><a name="ch5311"></a><h2>6. Question 3.</h2><p>En utilisant la classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5311/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a> d<span style="font-size: 0.9375rem;">e la question précédente écrivez une&nbsp;</span><span style="font-size: 0.9375rem;">classe <b>StringAffichable</b> qui utilise un observateur pour&nbsp;</span><span style="font-size: 0.9375rem;">afficher
+ un message sur la console à chaque fois que sa valeur change. Le 
+message contiendra un numéro de version, incrémenté à chaque 
+modification, suivi de la valeur courante.</span></p>
+<p>Ainsi, le code suivant :</p>
+<pre class="line-numbers  language-java"><code class=" language-java">StringAffichable s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringAffichable</span><span class="token punctuation">(</span><span class="token string">"init"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+s<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"bonjour"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+s<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+s<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"foo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+s<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"bar"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+s<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token string">"bar"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>affichera :</p>
+<pre>Version 0 : init
+Version 1 : bonjour
+Version 2 : foo
+Version 3 : bar
+</pre></div><div class="book_chapter"><a name="ch5314"></a><h2>7. Correction de la question 3</h2><p><b><span style="font-size: 0.9375rem;">Question 3.</span><br></b></p>
+<p><span style="font-size: 0.9375rem;">En utilisant la classe </span><span style="background-color: rgb(255, 255, 255); font-size: 0.9375rem;"><a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5314/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a></span>
+    <span style="font-size: 0.9375rem;"> de la question précédente 
+écrivez une&nbsp; classe StringAffichable qui utilise un observateur 
+pour afficher un message sur la console à chaque fois que sa valeur 
+change.</span><br></p>
+<p><b>Correction</b>.</p>
+<p>La classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5314/StringAffichable.java?time=1586008150137" target="_blank">StringAffichable</a> est précisée ci-dessous. Elle enregistrera, dans son constructeur,
+    un observateur qui se chargera de l'affichage à l'écran.</p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StringAffichable</span> <span class="token keyword">extends</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword">private</span> <span class="token keyword">int</span> cpt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword">public</span> <span class="token function">StringAffichable</span><span class="token punctuation">(</span>String initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">(</span>initialvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Version "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>cpt<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" : "</span> <span class="token operator">+</span> initialvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token annotation punctuation">@Override</span>
+			<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>IObservable<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> o<span class="token punctuation">,</span> String oldval<span class="token punctuation">,</span> String newval<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Version "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>cpt<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" : "</span> <span class="token operator">+</span> newval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br><span style="font-size: 0.9375rem;">Notez que :</span><br>
+<p></p>
+<ul>
+    <li><span>La classe StringAffichable est une valeur observable de 
+type chaîne. Elle dérive donc de ObservableVariable&lt;String&gt;, qui 
+fixe le type T à String. De même, l'observateur aura pour type 
+IObserver&lt;String&gt;.</span></li>
+    <li><span>Si setValue est appelée en précisant une nouvelle valeur 
+égale à la valeur courante, alors les observateurs ne sont pas appelés, 
+et il n'y a donc pas d'affichage à l'écran. Ceci est automatiquement 
+géré par l'implantation de setValue dans ObservableVariable.</span></li>
+    <li><span>Un premier affichage a lieu dans le constructeur avec la 
+valeur initiale par un appel séparé à println. C'est nécessaire, puisque
+ la création d'une variable observable ne génère pas d'update lors de 
+l'initialisation (la liste des observateurs étant d'ailleurs vide à ce 
+moment).</span></li>
+    <li><span>Nous utilisons une classe anonyme pour définir un observateur (voir ci-dessous).</span></li>
+</ul>
+<p><br></p>
+<p><b>Classes internes, classes locales et classes anonymes.</b></p><span>Rappelons que la syntaxe:</span><br>
+<ul></ul><pre class="line-numbers  language-java"><code class=" language-java"><span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><span>à l'intérieur du constructeur définit une&nbsp;<b>classe anonyme</b> qui implante l'interface&nbsp;IObserver&lt;String&gt; et dont les méthodes sont déclarées dans <i>code</i>
+ ; elle instancie ensuite cette classe, et passe l'instance à 
+addObserver. Nous aurions pu également écrire le code suivant 
+équivalent, qui donne un nom à la classe :</span></p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">public</span> <span class="token function">StringAffichable</span><span class="token punctuation">(</span>String initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 
+  <span class="token keyword">class</span> <span class="token class-name">Tmp</span> <span class="token keyword">implements</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Tmp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+La classe Tmp est ici une <b>classe locale</b>, définie à l'intérieur du constructeur et donc non visible en dehors. <br><br>Une <b>classe interne</b> Tmp, définie au niveau de la classe StringAffichable (et donc visible également en dehors du constructeur) serait
+aussi possible :
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StringAffichable</span> <span class="token keyword">extends</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token punctuation">{</span> 
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 
+  <span class="token keyword">class</span> <span class="token class-name">Tmp</span> <span class="token keyword">implements</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token punctuation">{</span> code <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> <span class="token function">StringAffichable</span><span class="token punctuation">(</span>String initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 
+    <span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Tmp</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre> <br>Rappelons
+ qu'une classe anonyme ou locale à accès à tous les arguments et 
+variables locales de la méthode dans laquelle elle est déclarée, ainsi 
+que toutes les méthodes et attributs de la classe contenant cette 
+méthode. Une classe interne a, quant à elle, accès à toutes les méthodes
+ et attributs de la classe la contenant. Donc, une classe anonyme, 
+locale ou interne aura accès à l'attribut cpt.<br><br>Nous pourrions 
+enfin envisager de définir Tmp comme une classe isolée, dans son propre 
+fichier Tmp.java. Cependant, elle ne pourrait pas facilement accéder au 
+compteur cpt de la classe StringAffichable (il serait nécessaire de 
+passer à Tmp, lors de la construction, une référence à un 
+StringAffichable, qu'elle gardera dans un attribut, mais aussi que 
+StringAffichable fournisse un getter pour cpt, ce qui est fastidieux et 
+expose potentiellement trop d'information sur StringAffichable au monde 
+extérieur).<br><br></div><div class="book_chapter"><a name="ch5319"></a><h2>8. Question 4</h2><p><b style="font-size: 0.9375rem;"><br></b></p><p><b style="font-size: 0.9375rem;">Liaison.</b></p>
+<p>Nous souhaitons maintenant ajouter à <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5319/ObservableVariable.java" target="_blank">ObservableVariable</a> une fonctionnalité lui permettant de lier sa valeur à celle d'une autre variable observable.&nbsp;<span style="font-size: 0.9375rem;">Nous ajoutons pour cela une méthode <tt>bind(ObservableVariable&lt;T&gt; other)</tt>.&nbsp;</span><span style="font-size: 0.9375rem;">Soient a et b des variables observables. A</span><span style="font-size: 0.9375rem;">près
+ avoir appelé a.bind(b), à chaque fois que la variable b change de 
+valeur, alors la variable a est modifiée pour prendre sa nouvelle 
+valeur. Il faudra pour cela que la variable a observe la variable b...</span></p>
+<p>La liaison est à sens unique : il reste possible de modifier 
+directement la valeur de la variable a, avec a.setValue(...), même si b 
+n'a pas changé de valeur. Cela n'affectera pas b. a garde alors sa 
+nouvelle valeur jusqu'au prochain appel à a.setValue ou au prochain 
+changement de valeur
+    de b.</p>
+<p>Quelle que soit la manière dont la valeur de a est mise à jour (par 
+modification de b, ou par appel à a.setValue), tous les observateurs de a
+ seront notifiés de la nouvelle valeur.</p>
+<p>Une variable peut être liée au plus une une fois. La méthode 
+a.bind(b) retournera true et effectuera la liaison si la variable a 
+n'est pas actuellement liée. Elle retournera false sans changer la 
+liaison si la variable a est déjà liée. Il est par contre possible à 
+plusieurs variables a1, a2, etc. d'être liées à une même variable b.</p>
+<p><span style="font-size: 0.9375rem;"><b>Question 4.</b></span></p><p><span style="font-size: 0.9375rem;">Programmez la méthode </span><tt>boolean bind(ObservableVariable&lt;T&gt; other)</tt><span style="font-size: 0.9375rem;">.</span></p></div><div class="book_chapter"><a name="ch5320"></a><h2>9. Correction de la question 4</h2><p></p>
+<p><b>Question 4.</b></p>
+<p>Programmez la méthode&nbsp;<tt>boolean bind(ObservableVariable&lt;T&gt; other)</tt>.</p>
+<p></p>
+<p><b>Correction de la question 4.</b></p>
+<p>La méthode bind est ajoutée ici dans une classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5320/ObservableVariableBind.java" target="_blank">ObservableVariableBind&lt;T&gt; </a>qui hérite de la classe
+    <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5320/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a> de la question 2 :</p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ObservableVariableBind</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword">public</span> <span class="token function">ObservableVariableBind</span><span class="token punctuation">(</span>T initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">(</span>initialvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">private</span> <span class="token keyword">boolean</span> isBound <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> isBound<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">bind</span><span class="token punctuation">(</span>ObservableVariable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> other<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token function">setValue</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> boundObserver <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token annotation punctuation">@Override</span>
+			<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>IObservable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">,</span> T oldval<span class="token punctuation">,</span> T newval<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token function">setValue</span><span class="token punctuation">(</span>newval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+		other<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>boundObserver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br><ul>
+    <li><span style="font-size: 0.9375rem;">Comme anticipé par l'énoncé,
+ la méthode bind(other) enregistre un nouvel observateur. Il s'agit 
+d'observer la variable other et, dans la méthode update, de propager la 
+nouvelle valeur à la variable observable qui a effectué le bind (donc 
+this). L'argument newval d'update correspond bien à la nouvelle valeur 
+de other.</span></li><li><span style="font-size: 0.9375rem;">Nous utilisons encore une classe anonyme.</span><br></li>
+    <li>La mise à jour de la valeur de this dans update se fait par un 
+appel à setValue. Ainsi les observateurs de this seront bien appelés. 
+Nous pouvons sans problème écrire une séquence comme <tt>a1.bind(b); a2.bind(b); b.bind(c);</tt> Toute modification de
+        c sera automatiquement propagée à b, puis à a1 et a2.</li>
+    <li>Notez bien l'imbrication des portées de variables : la 
+classe&nbsp;ObservableVariableBind contient une méthode bind, qui 
+contient une classe anonyme, qui contient une méthode update, qui 
+appelle setValue. Donc, setValue est bien appelée sur l'objet
+        this courant au moment de l'appel à bind, c'est à dire sur 
+l'objet sur lequel bind a été appelée. C'est naturellement ce que nous 
+souhaitons.</li>
+    <li>Afin de vérifier si une liaison existe déjà, nous utilisons un simple attribut booléen, et une métode utilitaire isBound().</li><li>Notez
+ que l'appel à bind commence par effectuer un 
+setValue(other.getValue()). Ceci assure que la variable reflète 
+immédiatement la valeur actuelle de other. Sinon, il faudrait attendre 
+la prochaine modification de la variable other pour que this commence à 
+refléter la valeur de other.</li>
+</ul>
+<p></p>
+<p><br></p>
+<p><br></p></div><div class="book_chapter"><a name="ch5321"></a><h2>10. Question 5</h2><p>Soit le programme suivant :</p>
+<pre class="line-numbers  language-java"><code class=" language-java">ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+c<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br>
+<p>Quel est l'effet de son exécution ?</p><p>Notez que le programme crée&nbsp;<span style="font-size: 0.9375rem;">un cycle de dépendances entre les variables. Est-ce un problème ?</span></p></div><div class="book_chapter"><a name="ch5322"></a><h2>11. Correction de la question 5</h2><p><span style="font-size: 0.9375rem;">Soit le programme suivant :</span><br></p>
+<pre class="line-numbers  language-java"><code class=" language-java">ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> c <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+c<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br>Après la création des trois variables observables :<br><ul><li>a.bind(b) lie a à b et modifie la valeur de a, qui devient immediatement celle de b : 5.</li><li>b.bind(c) lie b à c. b prend immédiatement la valeur de c, c'est à dire 10. Comme a est lié à b, a prend également la valeur 10.</li><li>c.bind(a)
+ lie c à a. La méthode fait un appel à c.setValue(a.getValue()) mais, 
+comme c vaut déjà 10, l'appel à setValue retourne immédiatement sans 
+appeler les observateurs.</li><li>a.setValue(-1) initie une séquence complexe d'appels de méthodes :</li><ul><li>a.setValue(-1) modifie la valeur de a puis informe son observateur de liaison, enregistré précédemment par c.bind(a).</li><li>Celui-ci
+ effectue c.setValue(-1), qui modifie la valeur de c puis informe à son 
+tour son observateur de liaison, enregistré par b.bind(c).</li><li>L'observateur
+ effectue b.setValue(-1), qui modifie la valeur de b et appelle son 
+observateur de liaison, enregistré par a.bind(b).</li><li>Celui-ci 
+exécute a.setValue(-1). Or, a a déjà la valeur -1, donc ce setValue 
+retourne immédiatement sans appeler d'observateur. Tous les appels 
+imbriqués à update et setValue retournent en cascade sans rien faire 
+d'autre.</li><li>À la fin de l'appel, toutes les variables a, b et c sont correctement fixées à la valeur -1.</li></ul></ul><span style="font-size: 0.9375rem;">Nous
+ remarquons que, malgré la présence d'un cycle de dépendances (a dépend 
+de b, b dépend de c, c dépend de a), toutes les variables sont bien 
+mises à jour sans boucle infinie. Ceci fonctionne correctement grâce au 
+test systématique, dans <span style="font-size: 0.9375rem;">setValue, 
+que la nouvelle valeur est bien différente de la valeur courante avant 
+d'appeler les observateurs. Sans ce test, alors il y aurait une séquence
+ infinie d'appels à setValue. Ceci génèrerait rapidement une exception 
+StackOverflowError (débordement de la pile d'appels).</span><br></span><p><br></p></div><div class="book_chapter"><a name="ch5323"></a><h2>12. Question 6</h2><p>Ajoutez à la classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5323/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a> une méthode <tt>boolean unbind()</tt>
+ qui supprime la liaison d'une variable
+    observable, s'il y en avait une, et retourne true. Elle se contente 
+de retourner false si la variable n'était pas liée. À l'issue de 
+a.bind(b) puis a.unbind(), la variable a n'est plus liée à b, et elle 
+n'est donc plus informée des changements de
+    la valeur de b. Par ailleurs, la variable a pourra à nouveau être 
+liée (rappelons qu'une variable ne peut être liée qu'à au plus une autre
+ variable à un instant donné).</p></div><div class="book_chapter"><a name="ch5326"></a><h2>13. Correction de la question 6</h2><p><span style="font-size: 0.9375rem;"><br></span></p><p><b style="font-size: 0.9375rem;">Question 6.</b></p>
+<p>Ajoutez à la classe&nbsp;<a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5323/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a>&nbsp;une méthode&nbsp;<tt>boolean unbind()</tt>&nbsp;qui
+    supprime la liaison d'une variable observable.<br></p>
+<p><b>Correction.</b></p>
+<p>La méthode unbind est ajoutée dans la classe&nbsp;<a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5326/ObservableVariableUnbind.java" target="_blank">ObservableVariableUnbind&lt;T&gt;</a> ci-dessous, qui hérite
+    d'
+    <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5326/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a>&nbsp;:</p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ObservableVariableUnbind</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword">public</span> <span class="token function">ObservableVariableUnbind</span><span class="token punctuation">(</span>T initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">(</span>initialvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">private</span> IObserver<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> boundObserver<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> IObservable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> boundObservable<span class="token punctuation">;</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> boundObserver <span class="token operator">!=</span> null<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">bind</span><span class="token punctuation">(</span>ObservableVariableUnbind<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> other<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token function">setValue</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		boundObserver <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token annotation punctuation">@Override</span>
+			<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>IObservable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> o<span class="token punctuation">,</span> T oldval<span class="token punctuation">,</span> T newval<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token function">setValue</span><span class="token punctuation">(</span>newval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+		boundObservable <span class="token operator">=</span> other<span class="token punctuation">;</span>
+		boundObservable<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>boundObserver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">unbind</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>		
+		boundObservable<span class="token punctuation">.</span><span class="token function">removeObserver</span><span class="token punctuation">(</span>boundObserver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		boundObserver <span class="token operator">=</span> null<span class="token punctuation">;</span>
+		boundObservable <span class="token operator">=</span> null<span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Rappelons que bind(other) créait un observateur, que nous avions appelé boundObserver, et l'enregistrait auprès de other par <tt>other.addObserver(boundObserver)</tt>. Il suffit donc que unbind exécute <tt>other.removeObserver(boundObserver)</tt>.
+ La
+    seule difficulté est que unbind ne connaît ni other, ni 
+boundObserver. Nous devons donc stocker ces informations dans des 
+attributs pour maintenir l'information entre un appel à bind et l'appel à
+ unbind suivant. Cela nous a amené à modifier également
+    le code de bind (et isBound) par rapport aux questions précédentes.</p>
+<p>Nos objets observateurs ne redéfinissent pas la méthode equals. La 
+liste d'observateurs maintenue par Observable est donc une liste de 
+références : pour supprimer un objet, il est nécessaire de passer à 
+removeObserver une référence au même objet que celui
+    passé à addObserver.</p></div><div class="book_chapter"><a name="ch5329"></a><h2>14. Question 7</h2><b><br>Liaison bidirectionnelle.<br></b><br>Nous
+ souhaitons maintenant définir un nouveau type de liaison, qui permet à 
+deux variables d'être maintenues égales. À chaque changement de valeur 
+d'une des deux variables, l'autre variable est également mise
+à jour. La liaison est donc bidirectionnelle.<br><br><b>Question 7.<br></b><br>Ajoutez à ObservableVariable&lt;T&gt; une méthode boolean <tt>boolean bindBidirectional(ObservableVariable&lt;T&gt; other)</tt> telle que <tt>a.bindBidirectional(b)</tt> lie les variables
+a et b de manière bi-directionnelle. Elle retroune true si la liaison est possible, false sinon.<br>Quelle condition doivent&nbsp; respecter a et b pour pouvoir créer cette liaison (i.e., bindBidirectional retourne true) ?<br>La dépendance cyclique entre
+a et b pose-t-elle un problème ?<br></div><div class="book_chapter"><a name="ch5330"></a><h2>15. Correction de la question 7</h2><p><b style="font-size: 0.9375rem;">Ajoutez à ObservableVariable&lt;T&gt; une méthode boolean&nbsp;<tt>boolean bindBidirectional(ObservableVariable&lt;T&gt; other)</tt>&nbsp;telle que <tt>a.bindBidirectional(b)</tt> lie les variables a et b de manière bi-directionnelle.</b></p>
+<p><span style="font-size: 0.9375rem;">Voici la classe </span><a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5330/ObservableVariableBidirectional.java" target="_blank" style="font-size: 0.9375rem; background-color: rgb(255, 255, 255);">ObservableVariableBidirectional&lt;T&gt;</a>
+    <span style="font-size: 0.9375rem;">
+        </span><span style="font-size: 0.9375rem;">, qui étend </span><a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5330/ObservableVariableUnbind.java" target="_blank" style="font-size: 0.9375rem; background-color: rgb(255, 255, 255);">ObservableVariableUnbind&lt;T&gt;</a>
+    <span style="font-size: 0.9375rem;">
+            </span><span style="font-size: 0.9375rem;"> des question précédentes en y ajoutant bindBidirectional :</span></p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ObservableVariableBidirectional</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token keyword">extends</span> <span class="token class-name">ObservableVariableUnbind</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+	
+	<span class="token keyword">public</span> <span class="token function">ObservableVariableBidirectional</span><span class="token punctuation">(</span>T initialvalue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">super</span><span class="token punctuation">(</span>initialvalue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">bindBidirectional</span><span class="token punctuation">(</span>ObservableVariableBidirectional<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> other<span class="token punctuation">)</span> <span class="token punctuation">{</span>		
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> other<span class="token punctuation">.</span><span class="token function">isBound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		other<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>	
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br><span style="font-size: 0.9375rem;">Cette méthode ne pose pas 
+vraiment de difficulté : elle se contente d'appeler bind sur this et sur
+ other pour créer la double liaison.<br><br><b>Quelle condition doivent&nbsp; respecter a et b pour pouvoir créer cette liaison (i.e., bindBidirectional retourne true) ?<br><span style="font-size: 0.9375rem; font-weight: 400;"><br>Pour
+ que cela fonctionne, il faut que ni a ni b ne soit déjà liée. Nous 
+ajoutons un test en entrée de bindBidirectional. Notez que la 
+vérification est aussi faite dans bind. Cependant, il est préférable de 
+faire la vérification dans bindBidirectional avant le premier bind pour 
+éviter de se retrouver dans une situation où un bind a été effectué et 
+le deuxième échoue.</span><br></b>
+</span>
+<p><br></p>
+<p><b>La dépendance cyclique entre a et b pose-t-elle un problème ?<br></b></p>
+<p>Non. Comme pour l'exemple de la question 5, cela ne pose aucun 
+problème, grâce à la vérification, intégrée à setValue, que la nouvelle 
+et l'ancienne valeurs sont différentes avant d'appeler les observateurs.
+ Ainsi, a.setValue va appeler b.setValue via
+    la méthode update de son observateur, qui appellera à son tour 
+a.setValue mais, à ce point, le deuxième a.setValue est detecté comme 
+redondant et la séquence d'appels aux observateurs s'arrête.</p>
+<p><br></p></div><div class="book_chapter"><a name="ch5333"></a><h2>16. Question 8</h2><p><b><br></b></p><p><b>Variable somme observable.</b></p><p>Nous
+ souhaitons maintenant ajouter une variable observable entière dont la 
+valeur est égale à la somme de deux variables observables entières, 
+spécifiées à la construction. Dès que la valeur d'une de ces deux 
+variables argument change, alors la valeur de la variable somme est 
+également mise à jour (et ses observateurs en sont naturellement 
+informés).</p><p>Nous supposons par ailleurs qu'un client n'a pas le 
+droit de modifier la valeur de la variable somme directement, en 
+appelant setValue (contrairement au cas de bind).</p><p><b>Question 8.</b></p><p>Programmez une classe Adder qui implante une variable somme observable.</p><p></p><div><div><p>Comment peut-on interdire au client d'appeler setValue pour modifier directement la valeur de la variable ?</p></div></div><p></p></div><div class="book_chapter"><a name="ch5336"></a><h2>17. Correction de la question 8</h2><div>
+    <div>
+        <p><b><br></b></p><p><b>Question 8.</b></p>
+        <p>Programmez une classe Adder qui implante une variable somme observable.</p>
+        <p>Comment peut-on interdire au client d'appeler setValue pour modifier directement la valeur de la variable ?</p>
+    </div>
+</div>
+<div><a title="Précédent&nbsp;: 15. Correction de la question 7" href="https://moodle-sciences.upmc.fr/moodle-2019/mod/book/view.php?id=104990&amp;chapterid=5330"><i title="Précédent&nbsp;: 15. Correction de la question 7" aria-label="Précédent&nbsp;: 15. Correction de la question 7"></i></a></div><br><b>Correction.<br></b><br>Voici
+la classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5336/Adder.java" target="_blank">Adder</a>.&nbsp;<br>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Adder</span> <span class="token keyword">extends</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token function">Adder</span><span class="token punctuation">(</span>IObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> a<span class="token punctuation">,</span> IObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">super</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> b<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		IObserver<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> update <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">IObserver</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token annotation punctuation">@Override</span>
+			<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>IObservable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> o<span class="token punctuation">,</span> Integer oldval<span class="token punctuation">,</span> Integer newval<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				Adder<span class="token punctuation">.</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> newval <span class="token operator">-</span> oldval<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+		
+		a<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>update<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		b<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>update<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setValue</span><span class="token punctuation">(</span>Integer value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token string">"setValue d'un Adder"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<br>Elle hérite de la classe&nbsp;<a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5336/ObservableVariable.java" target="_blank">ObservableVariable&lt;T&gt;</a>&nbsp;en
+ fixant le paramètre de type T à Integer puisque la variable est 
+entière. Rappelons qu'un paramètre de type de générique ne peut être 
+qu'un type classe ou interface, pas un type primitif comme int.
+Nous utilisons donc le type Integer, qui est une version classe du type 
+entier (en pratique, une classe réduite à un attribut de type int). 
+Notez qu'il est généralement possible d'utiliser les opérateurs 
+arithmétiques, comme + et -, sur des instances
+de Integer. Java saura les interpréter et générer les conversions entre 
+int et Integer nécessaires. C'est pour cela que nous pouvons écrire 
+directement : <tt>a.getValue() + b.getValue()</tt>.<br><br>Tout le travail de mise à jour automatique de la valeur
+de Adder est effectué par le constructeur. Nous commençons par fixer la valeur initiale de la variable à <tt>a.getValue() + b.getValue()</tt>. Nous construisons ensuite un observateur update, qui est enregistré auprès de a et de b. Cet observateur met
+à la jour la valeur courante en y ajoutant <tt>setValue(getValue() + newval - oldval)</tt>, ce qui maintient la propriété que la valeur de this est égale à la somme de celle de a et de b. Nous aurions pu aussi écrire <tt>setValue(a.getValue() + b.getValue())</tt>.
+Notons que c'est le même objet observateur, update, qui est réutilisé à 
+la fois pour a et pour b, ce qui ne pose aucun problème. Par ailleurs, 
+il n'est pas nécessaire de garder des références sur a et sur b, donc 
+notre classe ne déclare aucun attribut.<br><br>Afin
+d'interdire au client de modifier directement la valeur de la variable 
+par un appel à setValue, nous l'avons redéfinie pour qu'elle signale une
+ exception UnsupportedOperationException. Il s'agit d'une exception 
+standard, déscendant de RuntimeException.
+Il n'est donc pas nécessaire de la signaler dans la signature de la 
+méthode avec le mot-clé <tt>throws</tt>.<br><br>Une difficulté apparaît 
+avec setValue. En effet, nous l'avons redéfinie pour lancer une 
+exception, mais nous avons également besoin de
+l'appeler dans la méthode update de notre observateur pour effectivement
+ mettre à jour la valeur de la variable (attribut privé 
+d'ObservableVariable) et informer les observateurs. update doit donc 
+appeler l'implantation de setValue dans la classe parent,
+et non la nouvelle implantation. Ceci ce fait normalement en spécifiant <tt>super.setValue</tt>. Cependant, l'appel à setValue est dans une classe anonyme. Par défaut, <tt>super.setValue</tt>
+ sera interprété comme la méthode setValue du parent de la classe
+anonyme, qui est Object. Il est nécessaire de spécifier à Java de quel 
+parent nous parlons, ce qui explique la syntaxe un peu étrange : <tt>Adder.super.setValue</tt>. Il signifie : la méthode setValue du parent de la classe Adder englobant la classe anonyme.<br>Dans
+la
+ question 4, par exemple, update appelait la méthode setValue de la 
+classe courante, ObservableVariableBind. Nous avions écrit simplement 
+setValue, ce qui était en réalité un raccourci pour&nbsp;<tt>ObservableVariableBind.this.setValue</tt>. Écrire
+<tt>this.setValue&nbsp;</tt>aurait provoqué une erreur de compilation, puisqu'il aurait signifié : la méthode setValue de la classe anonyme.<br></div><div class="book_chapter"><a name="ch5339"></a><h2>18. Question 9</h2><p><b><br></b></p>
+<p><b>Programmation déclarative.</b></p>
+<p>La notion de liaison de variables (bind) et d'opérations 
+arithmétiques (classe Adder) permet de proposer une bibliothèque pour 
+définir des expressions complexes, dont le résultat sera automatiquement
+ mis à jour quand une des variables de l'expression
+    change. Ce type de programmation, où le programmeur se contente de 
+décrire des relations entre objets sans se soucier de la manière dont 
+leurs valeurs seront calculées, est appelée <i>programmation déclarative</i>.</p>
+<p>Nous allons programmer une classe Bindings permettant, grâce à des 
+méthodes statiques, de créer des expressions complexes. Voici un exemple
+ :</p>
+<pre class="line-numbers  language-java"><code class=" language-java">ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> r <span class="token operator">=</span> Bindings<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> Bindings<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> Bindings<span class="token punctuation">.</span><span class="token function">cst</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>Cet exemple crée deux variables, a et b. Il utilise ensuite la classe Bindings pour créer une variable r égale à la valeur de <tt>a + b + 1</tt>. À chaque modification de la valeur de a ou b, la valeur de r sera automatiquement mise à jour. Ici, Bindings.add utilisera
+    la classe Adder de la question précédente pour créer des variables somme, tandis que Bindings.cst créera une constante.</p>
+<p><b>Question 9.</b></p>
+<p>Programmez la classe Bindings.</p>
+<p><br></p></div><div class="book_chapter"><a name="ch5341"></a><h2>19. Correction de la question 9</h2><p></p>
+<p><b>Question 9.</b></p>
+<p>Programmez la classe Bindings.</p><b>Correction</b>.
+<p></p>
+<p>Voici la classe <a href="https://moodle-sciences.upmc.fr/moodle-2019/pluginfile.php/750728/mod_book/chapter/5341/Bindings.java" target="_blank">Bindings</a>.</p>
+<pre class="line-numbers  language-java"><code class=" language-java"><span class="token keyword">package</span> pobj<span class="token punctuation">.</span>observer<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Bindings</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> <span class="token function">add</span><span class="token punctuation">(</span>ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> a<span class="token punctuation">,</span> ObservableVariable<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Adder</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> ObservableVariable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token function">cst</span><span class="token punctuation">(</span>T cst<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ObservableVariable</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span>cst<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token annotation punctuation">@Override</span>
+			<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setValue</span><span class="token punctuation">(</span>T value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token string">"setValue d'une constante"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>		
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Cette classe ne contient que des méthodes statiques qui créent des 
+objets avec new. Ce type de classe qui regroupe la création d'objets de 
+types différents correspond au <b>design pattern Factory</b> (ou, plus 
+précisement, Static Factory Method, puisqu'il
+    s'agit d'utiliser des méthodes statiques). L'avantage est de 
+simplifier pour le client la création d'objets de nature liés mais qui 
+sont distribués dans des classes différentes : toutes les opérations de 
+création sont alors regroupées dans une même
+    classe.
+</p>
+<p>La méthode add ne pose pas de problème : elle se contente d'instancier la classe Adder vue précédemment.</p>
+<p>La méthode cst est un peu plus intéressante. Notre solution utilise une classe anonyme&nbsp;<span style="font-size: 0.9375rem;">pour
+ préciser le comportement&nbsp; d'ObservableVariable et créer une 
+"variable" dont la valeur ne pourra pas être changée par setValue :</span></p>
+<p></p>
+<ul>
+    <li><span style=""><tt>new ObservableVariable&lt;T&gt;(cst) { code }</tt> indique que la classe anonyme hérite d'ObservableVariable&lt;T&gt;.</span></li>
+    <li><span style=""><tt>new ObservableVariable&lt;T&gt;(cst)</tt> 
+indique également qu'il faut créer une nouvelle instance de cette classe
+ anonyme, en passant la valeur cst au constructeur de sa classe parent :
+ ObservableVariable. Ainsi la valeur initiale de la variable est bien 
+cst, la valeur passée en argument à la méthode statique cst.<br></span></li>
+    <li><span style="">Dans <tt>code</tt>, nous trouverons la 
+redéfinition de la méthode setValue : elle signalera une exception afin 
+d'interdire au client de modifier la valeur de la variable après sa 
+création.</span>
+    </li>
+    <li><span style="">La syntaxe <tt>public static &lt;T&gt; ObservableVariable&lt;T&gt; cst(T cst)</tt>
+ indique que la méthode cst est générique : elle est paramétrée par la 
+variable de type T. C'est donc une méthode qui, pour tout type T, prend 
+un argument de ce type et retourne un ObservableVariable sur ce type. 
+Par exemple, si cst est appelée avec un argument entier (int ou 
+Integer), alors elle retournera un ObservableVariable&lt;Integer&gt;. 
+Appelée avec un argument chaîne, elle retournera 
+un&nbsp;ObservableVariable&lt;String&gt;. Le premier &lt;T&gt;, au début
+ de la signature, déclare la variable de type T, qui est ensuite 
+utilisée pour spécifier le type de retour, ObservableVariable&lt;T&gt; 
+et le type de l'argument, cst. Cette variable de type est également 
+utilisée dans le corps de la méthode, quand nous écrivons <tt>new ObservableVariable&lt;T&gt;</tt>. Cette variable de type n'est pas visible en dehors de la méthode.</span></li>
+</ul>
+<p>Notez qu'il aurait tout à fait été possible de définir une classe 
+Constant séparée, et de l'utiliser dans Bindings, comme nous l'avons 
+fait pour Adder. Mais nous profitons de ce corrigé pour vous montrer 
+l'efficacité des classes anonymes. Nous irons encore
+    plus loin en terme de concision quand nous aborderons les lambda 
+expressions...</p>
+<p></p></div><div class="book_chapter"><a name="ch5343"></a><h2>20. Conclusion</h2><p>Cet exercice est inspiré de la notion de propriétés en JavaFX, correspondant à nos ObservableVariable.</p><p>Pour aller plus loin, vous pouvez consulter le <a class="autolink" title="Tutoriel JavaFX" href="https://moodle-sciences.upmc.fr/moodle-2019/mod/resource/view.php?id=100942">Tutoriel JavaFX</a> sur le Moodle du cours, le tutoriel <a href="https://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm" target="_blank">JavaFX d'Oracle</a>,&nbsp;<span style="font-size: 0.9375rem;">ainsi que la d</span><span style="font-size: 0.9375rem;">ocumentation de JavaFX et notamment les classes&nbsp;</span><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/beans/property/Property.html" target="_blank" style="font-size: 0.9375rem; background-color: rgb(255, 255, 255);">Property</a><span style="font-size: 0.9375rem;">&nbsp;(et ses sous-classes) ainsi que </span><a href="https://docs.oracle.com/javase/8/javafx/api/javafx/beans/binding/Bindings.html" target="_blank" style="background-color: rgb(255, 255, 255); font-size: 0.9375rem;">Bindings</a><span style="font-size: 0.9375rem;">.
+ Une particularité intéressante de JavaFX est d'associer des propriétés 
+aux différents contrôles graphiques (boutons, champs, etc.). Il est 
+ainsi facile de réagir à des modifications par l'utilisateur grâce à des
+ observateurs.</span></p></div></div>
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle-sciences.upmc.fr/moodle-2019/lib/requirejs.php/1584696211/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle-sciences.upmc.fr/moodle-2019/lib/javascript.php/1584696211/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://moodle-sciences.upmc.fr/moodle-2019/lib/javascript.php/1584696211/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle-sciences.upmc.fr/moodle-2019/lib/javascript.php/1584696211/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="td9_fichiers/require.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle-sciences.upmc.fr/moodle-2019/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("fr",{
+ "Audio Player": "Lecteur audio",
+ "Video Player": "Lecteur vidéo",
+ "Play": "Lecture",
+ "Pause": "Pause",
+ "Replay": "Revoir",
+ "Current Time": "Temps actuel",
+ "Duration Time": "Durée",
+ "Remaining Time": "Temps restant",
+ "Stream Type": "Type de flux",
+ "LIVE": "EN DIRECT",
+ "Loaded": "Chargé",
+ "Progress": "Progression",
+ "Progress Bar": "Barre de progression",
+ "progress bar timing: currentTime={1} duration={2}": "{1} de {2}",
+ "Fullscreen": "Plein écran",
+ "Non-Fullscreen": "Fenêtré",
+ "Mute": "Sourdine",
+ "Unmute": "Son activé",
+ "Playback Rate": "Vitesse de lecture",
+ "Subtitles": "Sous-titres",
+ "subtitles off": "Sous-titres désactivés",
+ "Captions": "Sous-titres transcrits",
+ "captions off": "Sous-titres transcrits désactivés",
+ "Chapters": "Chapitres",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions désactivées",
+ "Audio Track": "Piste audio",
+ "Volume Level": "Niveau de volume",
+ "You aborted the media playback": "Vous avez interrompu la lecture de la vidéo.",
+ "A network error caused the media download to fail part-way.": "Une erreur de réseau a interrompu le téléchargement de la vidéo.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "Cette vidéo n'a pas pu être chargée, soit parce que le serveur ou le réseau a échoué ou parce que le format n'est pas reconnu.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "La lecture de la vidéo a été interrompue à cause d'un problème de corruption ou parce que la vidéo utilise des fonctionnalités non prises en charge par votre navigateur.",
+ "No compatible source was found for this media.": "Aucune source compatible n'a été trouvée pour cette vidéo.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "Le média est chiffré et nous n'avons pas les clés pour le déchiffrer.",
+ "Play Video": "Lire la vidéo",
+ "Close": "Fermer",
+ "Close Modal Dialog": "Fermer la boîte de dialogue modale",
+ "Modal Window": "Fenêtre modale",
+ "This is a modal window": "Ceci est une fenêtre modale",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "Ce modal peut être fermé en appuyant sur la touche Échap ou activer le bouton de fermeture.",
+ ", opens captions settings dialog": ", ouvrir les paramètres des sous-titres transcrits",
+ ", opens subtitles settings dialog": ", ouvrir les paramètres des sous-titres",
+ ", opens descriptions settings dialog": ", ouvrir les paramètres des descriptions",
+ ", selected": ", sélectionné",
+ "captions settings": "Paramètres des sous-titres transcrits",
+ "subtitles settings": "Paramètres des sous-titres",
+ "descriptions settings": "Paramètres des descriptions",
+ "Text": "Texte",
+ "White": "Blanc",
+ "Black": "Noir",
+ "Red": "Rouge",
+ "Green": "Vert",
+ "Blue": "Bleu",
+ "Yellow": "Jaune",
+ "Magenta": "Magenta",
+ "Cyan": "Cyan",
+ "Background": "Arrière-plan",
+ "Window": "Fenêtre",
+ "Transparent": "Transparent",
+ "Semi-Transparent": "Semi-transparent",
+ "Opaque": "Opaque",
+ "Font Size": "Taille des caractères",
+ "Text Edge Style": "Style des contours du texte",
+ "None": "Aucun",
+ "Raised": "Élevé",
+ "Depressed": "Enfoncé",
+ "Uniform": "Uniforme",
+ "Dropshadow": "Ombre portée",
+ "Font Family": "Famille de polices",
+ "Proportional Sans-Serif": "Polices à chasse variable sans empattement (Proportional Sans-Serif)",
+ "Monospace Sans-Serif": "Polices à chasse fixe sans empattement (Monospace Sans-Serif)",
+ "Proportional Serif": "Polices à chasse variable avec empattement (Proportional Serif)",
+ "Monospace Serif": "Polices à chasse fixe avec empattement (Monospace Serif)",
+ "Casual": "Manuscrite",
+ "Script": "Scripte",
+ "Small Caps": "Petites capitales",
+ "Reset": "Réinitialiser",
+ "restore all settings to the default values": "Restaurer tous les paramètres aux valeurs par défaut",
+ "Done": "Terminé",
+ "Caption Settings Dialog": "Boîte de dialogue des paramètres des sous-titres transcrits",
+ "Beginning of dialog window. Escape will cancel and close the window.": "Début de la fenêtre de dialogue. La touche d'échappement annulera et fermera la fenêtre.",
+ "End of dialog window.": "Fin de la fenêtre de dialogue."
+});
+
+    });
+});;
+
+require(['theme_boost/loader']);
+;
+require(["core/notification"], function(amd) { amd.init(750728, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });;
+require(["core/page_global"], function(amd) { amd.init(); });
+});
+//]]>
+</script>
+<script type="text/javascript" src="td9_fichiers/prism.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Modifi\u00e9 le","name":"Nom","error":"Erreur","info":"Information","yes":"Oui","no":"Non","cancel":"Annuler","confirm":"Confirmer","areyousure":"En \u00eates-vous bien s\u00fbr\u00a0?","closebuttontitle":"Fermer","unknownerror":"Erreur inconnue"},"repository":{"type":"Type","size":"Taille","invalidjson":"Cha\u00eene JSON non valide","nofilesattached":"Aucun fichier joint","filepicker":"S\u00e9lecteur de fichiers","logout":"D\u00e9connexion","nofilesavailable":"Aucun fichier disponible","norepositoriesavailable":"D\u00e9sol\u00e9, aucun de vos d\u00e9p\u00f4ts actuels ne peut retourner de fichiers dans le format requis.","fileexistsdialogheader":"Le fichier existe","fileexistsdialog_editor":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint au texte que vous modifiez.","fileexistsdialog_filemanager":"Un fichier de ce nom a d\u00e9j\u00e0 \u00e9t\u00e9 joint","renameto":"Renommer \u00e0 \u00ab\u00a0{$a}\u00a0\u00bb","referencesexist":"Ce fichier est utilis\u00e9 comme source par {$a} alias.","select":"S\u00e9lectionnez"},"admin":{"confirmdeletecomments":"Voulez-vous vraiment supprimer des commentaires\u00a0?","confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"fr"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random5e905369505982'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5e905369505982'); });
+})();
+//]]>
+</script>
+
+
+</body></html>
